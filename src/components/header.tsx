@@ -3,7 +3,7 @@ import React from "react";
 // import {Logo} from "../assets"
 const Header = () => {
   return (
-    <header className="flex justify-between items-center py-[3%] px-[6%]">
+    <header className="flex justify-between items-center ">
       {/* <Logo/> */}
       <div>
         <Image
@@ -13,7 +13,7 @@ const Header = () => {
           alt="getajob_logo"
         />
       </div>
-    
+
       <nav className="flex justify-between gap-5 items-center">
         <p>Companies</p>
         <p>Candidates</p>
@@ -23,8 +23,8 @@ const Header = () => {
       </nav>
 
       <div className="flex justify-between gap-5 items-center">
-        <span>Sign in</span>
         <span>Sign up</span>
+        <span className="bg-[#06942A33] rounded-full px-10 py-2">Login </span>
       </div>
     </header>
   );
