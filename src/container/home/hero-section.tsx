@@ -22,12 +22,12 @@ const HeroSection = () => {
           <input
             type="text"
             placeholder="Enter keywords, skill, interest "
-            className="w-full  bg-transparent p-2"
+            className="w-full  bg-transparent p-2 outline-none focus-visible:ring-transparent focus-visible:ring-offset-0"
           />
           <input
             type="text"
             placeholder="Location"
-            className="border-l-2 border-l-[#E5E5E5] w-2/3 p-2"
+            className="border-l-2 border-l-[#E5E5E5] w-2/3 p-2 focus-visible:ring-transparent focus-visible:ring-offset-0 outline-none"
           />
           <button className="bg-green-700 rounded-full px-5">
             <SearchIcon />
@@ -49,12 +49,7 @@ const HeroSection = () => {
               height={43}
               alt="icon"
             />
-            <Image
-              src={"/images/kpmg.png"}
-              width={70}
-              height={33}
-              alt="icon"
-            />
+            <Image src={"/images/kpmg.png"} width={70} height={33} alt="icon" />
           </div>
         </div>
       </div>
