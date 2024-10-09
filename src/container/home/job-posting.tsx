@@ -73,7 +73,7 @@ const JobPosting = () => {
   const visibleJobs = jobData.slice(currentIndex, currentIndex + itemsPerPage);
 
   return (
-    <div className="flex flex-col gap-5 py-[6%] my-[10%] lg:my-0 text-[#3F403F] overflow-hidden w-full p-[6%]">
+    <div className="flex flex-col gap-1 py-[6%] my-[10%] lg:my-0 text-[#3F403F] overflow-hidden w-full p-[6%]">
       <div className="flex gap-5">
         {visibleJobs.map((data) => (
           <div
