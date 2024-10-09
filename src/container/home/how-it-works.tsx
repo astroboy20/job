@@ -4,12 +4,12 @@ import React from "react";
 
 const HowItWorks = () => {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 py-[6%] text-[#3F403F]">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 px-[6%] py-[3%] my-[10%] lg:my-0 text-[#3F403F]">
       <div className="order-2 lg:order-1">
         <Image
           src={"/images/how.svg"}
-          width={400}
-          height={400}
+          width={500}
+          height={600}
           alt="how-image"
           className="mx-auto lg:mx-0"
         />
@@ -53,4 +53,4 @@ const HowItWorks = () => {
   );
 };
 
-export default HowItWorks;
+export  {HowItWorks};

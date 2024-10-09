@@ -3,7 +3,7 @@ import React from "react";
 import { SearchIcon } from "../../assets";
 const HeroSection = () => {
   return (
-    <div className="flex flex-col-reverse lg:flex-row justify-between items-center py-[3%]">
+    <div className="flex flex-col-reverse lg:flex-row justify-between items-center py-[3%] px-[6%]">
       <div className="text-[#3F403F] flex flex-col gap-5">
       <div>
           <h1 className="text-[32px] lg:text-[48px] font-[700] leading-[38px] lg:leading-[54.96px]">

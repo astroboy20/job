@@ -4,7 +4,7 @@ import React from "react";
 
 const Proof = () => {
   return (
-    <div className="flex flex-col lg:grid lg:grid-cols-2 items-center gap-10 bg-[#06942A1A] text-[#3F403F] p-5">
+    <div className="flex flex-col lg:grid lg:grid-cols-2 items-center gap-10 bg-[#06942A1A] text-[#3F403F] p-5 mx-[6%] my-[10%] lg:my-[6%]">
       <div className="flex flex-col gap-5 lg:pl-[5%]">
         <h1 className="text-[24px] lg:text-[36px] font-[700]">
           Over 1000+ jobs from top companies in our network
