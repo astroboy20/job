@@ -1,7 +1,5 @@
-"use client";
 import Image from "next/image";
-import React, { useState } from "react";
-import { NextIcon, PrevIcon } from "@/assets";
+import React from "react";
 
 const jobData = [
   {
@@ -55,35 +53,19 @@ const jobData = [
 ];
 
 const JobPosting = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const itemsPerPage = 3;
-
-  const handleNext = () => {
-    if (currentIndex < jobData.length - itemsPerPage) {
-      setCurrentIndex((prevIndex) => prevIndex + 1);
-    }
-  };
-
-  const handlePrev = () => {
-    if (currentIndex > 0) {
-      setCurrentIndex((prevIndex) => prevIndex - 1);
-    }
-  };
-
-  const visibleJobs = jobData.slice(currentIndex, currentIndex + itemsPerPage);
-
   return (
-    <div className="flex flex-col gap-1 py-[6%] my-[10%] lg:my-0 text-[#3F403F] overflow-hidden w-full p-[6%]">
+    <div className="   py-[6%] my-[10%] lg:my-0 text-[#3F403F] overflow-x-scroll no-scrollbar w-full pl-[6%]">
+        
       <div className="flex gap-5">
-        {visibleJobs.map((data) => (
+        {jobData.map((data) => (
           <div
-            className="gap-10 w-full border-2 h-fit bg-white rounded-[5px]"
+            className=" gap-10 w-full border-2 bg-white rounded-[5px]"
             key={data.id}
           >
             <p className="ml-auto my-5 mr-2 bg-[#F4F5F9] rounded-full w-fit text-[12px] text-[#9B9B9B] px-5 py-1">
               {data.job_type}
             </p>
-            <div className="p-5 flex flex-col h-fit gap-5 text-center w-[300px] sm:min-w-[200px] md:min-w-[250px] lg:min-w-[300px]">
+            <div className="p-5 flex flex-col gap-5 text-center w-[300px] sm:min-w-[200px] md:min-w-[250px] lg:min-w-[300px]">
               <div>
                 <Image
                   src={data.src}
@@ -108,18 +90,12 @@ const JobPosting = () => {
           </div>
         ))}
       </div>
-
-
-      <div className="flex gap-2 ml-auto mb-4">
-        <span onClick={handlePrev} className="cursor-pointer">
-          <PrevIcon />
-        </span>
-        <span onClick={handleNext} className="cursor-pointer">
-          <NextIcon />
-        </span>
-      </div>
     </div>
   );
 };
 
 export { JobPosting };
+
+{
+ 
+}
