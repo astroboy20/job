@@ -1,10 +1,13 @@
+"use client"
 import Image from "next/image";
-import React from "react";
-// import {Logo} from "../assets"
+import React, { useState } from "react";
+
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
-    <header className="flex justify-between items-center ">
-      {/* <Logo/> */}
+    <header className="flex justify-between items-center p-4">
+      {/* Logo */}
       <div>
         <Image
           src={"/images/getajob_logo.png"}
@@ -14,7 +17,32 @@ const Header = () => {
         />
       </div>
 
-      <nav className="flex justify-between gap-5 items-center">
+      {/* Hamburger menu for mobile */}
+      <div className="lg:hidden">
+        <button onClick={() => setIsMenuOpen(!isMenuOpen)} aria-label="Toggle Menu">
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            ></path>
+          </svg>
+        </button>
+      </div>
+
+      {/* Navigation */}
+      <nav
+        className={`${
+          isMenuOpen ? "flex" : "hidden"
+        } lg:flex flex-col lg:flex-row justify-between gap-5 items-center absolute lg:relative top-16 left-0 right-0 bg-white lg:bg-transparent lg:static w-full lg:w-auto`}
+      >
         <p>Companies</p>
         <p>Candidates</p>
         <p>Assessment</p>
@@ -22,9 +50,10 @@ const Header = () => {
         <p>Career Advice</p>
       </nav>
 
-      <div className="flex justify-between gap-5 items-center">
+      {/* Authentication Buttons */}
+      <div className="hidden lg:flex justify-between gap-5 items-center">
         <span>Sign up</span>
-        <span className="bg-[#06942A33] rounded-full px-10 py-2">Login </span>
+        <span className="bg-[#06942A33] rounded-full px-5 py-2">Login</span>
       </div>
     </header>
   );

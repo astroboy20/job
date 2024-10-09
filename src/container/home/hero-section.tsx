@@ -3,21 +3,18 @@ import React from "react";
 import { SearchIcon } from "../../assets";
 const HeroSection = () => {
   return (
-    <div className="flex justify-between items-center py-[3%]">
+    <div className="flex flex-col-reverse lg:flex-row justify-between items-center py-[3%]">
       <div className="text-[#3F403F] flex flex-col gap-5">
-        <div>
-          <h1 className="text-[48px] font-[700]  leading-[54.96px]">
-            {" "}
+      <div>
+          <h1 className="text-[32px] lg:text-[48px] font-[700] leading-[38px] lg:leading-[54.96px]">
             Find a <span className="text-[#68bd7e]">job</span> easily
           </h1>
-          <p>
-            {" "}
-            With verified, up-to-date job listings directly from employer
-            websites, we <br /> create a premium experience for job seekers,
-            employers, and data <br /> seekers alike.
+          <p className="text-sm lg:text-base mt-3 lg:mt-0">
+            With verified, up-to-date job listings directly from employer websites, we <br className="hidden lg:inline" />
+            create a premium experience for job seekers, employers, and data <br className="hidden lg:inline" />
+            seekers alike.
           </p>
         </div>
-
         <div className="flex border-2 rounded-full  text-[14px]">
           <input
             type="text"
@@ -53,13 +50,14 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-      <div>
+      <div className="mb-10 lg:mb-0">
         {" "}
         <Image
           src={"/images/hero-image.svg"}
           width={500}
           height={500}
           alt="hero-image"
+          objectFit="cover"
         />
       </div>
     </div>
