@@ -56,7 +56,7 @@ const Header = () => {
 
       {/* Mobile menu that shows when isMenuOpen is true */}
       {isMenuOpen && (
-        <nav className="flex flex-col gap-5 items-center absolute top-16 left-0 right-0 bg-white w-full lg:hidden">
+        <nav className="flex flex-col gap-5 items-center absolute top-16 left-0 right-0 bg-white w-full lg:hidden h-[100dvh]">
           <p>Companies</p>
           <p>Candidates</p>
           <p>Assessment</p>

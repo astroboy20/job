@@ -44,8 +44,8 @@ export const ForwardIcon = () => (
 );
 export const NextIcon = () => (
   <svg
-    width="40"
-    height="24"
+    width="20"
+    height="20"
     viewBox="0 0 40 24"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
@@ -58,8 +58,8 @@ export const NextIcon = () => (
 );
 export const PrevIcon = () => (
   <svg
-    width="40"
-    height="24"
+    width="20"
+    height="20"
     viewBox="0 0 40 24"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
