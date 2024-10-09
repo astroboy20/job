@@ -56,16 +56,31 @@ const Header = () => {
 
       {/* Mobile menu that shows when isMenuOpen is true */}
       {isMenuOpen && (
-        <nav className="flex flex-col gap-5 items-center absolute top-16 left-0 right-0 bg-white w-full lg:hidden h-[100dvh]">
-          <p>Companies</p>
-          <p>Candidates</p>
-          <p>Assessment</p>
-          <p>Post a Job</p>
-          <p>Career Advice</p>
+        <nav className="fixed top-0 left-0 right-0 h-[100dvh] bg-white flex flex-col gap-5 p-5 lg:hidden">
+          {/* Close button */}
+          <button
+            onClick={() => setIsMenuOpen(false)}
+            aria-label="Close Menu"
+            className="self-end text-xl"
+          >
+            X
+          </button>
 
+          {/* Mobile navigation */}
+          <div className="flex flex-col gap-5 items-center">
+            <p>Companies</p>
+            <p>Candidates</p>
+            <p>Assessment</p>
+            <p>Post a Job</p>
+            <p>Career Advice</p>
+          </div>
+
+          {/* Mobile login/signup */}
           <div className="flex flex-col items-center gap-3">
             <span>Sign up</span>
-            <span className="bg-[#06942A33] rounded-full px-5 py-2">Login</span>
+            <span className="bg-[#06942A33] rounded-full px-5 py-2">
+              Login
+            </span>
           </div>
         </nav>
       )}

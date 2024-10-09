@@ -91,7 +91,7 @@ const JobPosting = () => {
             <p className="ml-auto my-5 mr-2 bg-[#F4F5F9] rounded-full w-fit text-[12px] text-[#9B9B9B] px-5 py-1">
               {data.job_type}
             </p>
-            <div className="p-5 flex flex-col gap-5 text-center w-[300px] sm:min-w-[200px] md:min-w-[250px] lg:min-w-[300px]">
+            <div className="p-5 flex flex-col h-fit gap-5 text-center w-[300px] sm:min-w-[200px] md:min-w-[250px] lg:min-w-[300px]">
               <div>
                 <Image
                   src={data.src}
