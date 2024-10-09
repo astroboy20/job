@@ -56,7 +56,7 @@ const Header = () => {
 
       {/* Mobile menu that shows when isMenuOpen is true */}
       {isMenuOpen && (
-        <nav className="fixed top-0 left-0 right-0 h-[100dvh] bg-white flex flex-col gap-5 p-5 lg:hidden">
+        <nav className="fixed top-0 left-0 right-0 h-full bg-white flex flex-col gap-5 p-5 lg:hidden">
           {/* Close button */}
           <button
             onClick={() => setIsMenuOpen(false)}

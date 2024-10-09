@@ -1,7 +1,7 @@
-"use client"
+"use client";
 import Image from "next/image";
 import React, { useState } from "react";
-import { NextIcon, PrevIcon } from "@/assets"; 
+import { NextIcon, PrevIcon } from "@/assets";
 
 const jobData = [
   {
@@ -56,7 +56,7 @@ const jobData = [
 
 const JobPosting = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const itemsPerPage = 3; 
+  const itemsPerPage = 3;
 
   const handleNext = () => {
     if (currentIndex < jobData.length - itemsPerPage) {
@@ -73,19 +73,11 @@ const JobPosting = () => {
   const visibleJobs = jobData.slice(currentIndex, currentIndex + itemsPerPage);
 
   return (
-    <div className="flex flex-col-reverse gap-5 py-[6%] my-[10%] lg:my-0 text-[#3F403F] overflow-hidden w-full p-[6%]">
-      <div className="flex gap-2 ml-auto mb-4">
-        <span onClick={handlePrev} className="cursor-pointer">
-          <PrevIcon />
-        </span>
-        <span onClick={handleNext} className="cursor-pointer">
-          <NextIcon />
-        </span>
-      </div>
+    <div className="flex flex-col gap-5 py-[6%] my-[10%] lg:my-0 text-[#3F403F] overflow-hidden w-full p-[6%]">
       <div className="flex gap-5">
         {visibleJobs.map((data) => (
           <div
-            className="gap-10 w-full border-2 bg-white rounded-[5px]"
+            className="gap-10 w-full border-2 h-fit bg-white rounded-[5px]"
             key={data.id}
           >
             <p className="ml-auto my-5 mr-2 bg-[#F4F5F9] rounded-full w-fit text-[12px] text-[#9B9B9B] px-5 py-1">
@@ -115,6 +107,16 @@ const JobPosting = () => {
             </div>
           </div>
         ))}
+      </div>
+
+
+      <div className="flex gap-2 ml-auto mb-4">
+        <span onClick={handlePrev} className="cursor-pointer">
+          <PrevIcon />
+        </span>
+        <span onClick={handleNext} className="cursor-pointer">
+          <NextIcon />
+        </span>
       </div>
     </div>
   );
